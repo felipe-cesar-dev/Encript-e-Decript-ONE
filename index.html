@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptando e Decriptando Palavras</title>
+    <script src="index.js"></script>
 </head>
 <body>
     <header>
@@ -11,14 +12,18 @@
     </header>
 
     <main>
-        <input placeholder="Digite seu texto" type="text" name="" class="">
+        <input 
+        name="textoDigitado" placeholder="Digite seu texto" type="text"  class="textoDigitado">
         <p>Apenas letras minúsculas e sem acento</p>
-        <button>Criptografar</button>
-        <button>Descriptografar</button>
+        <button class="encriptar" onclick="encriptar()">Criptografar</button>
+        <button class="descriptar" onclick="descriptar()">Descriptografar</button>
         <section>
-            <img src="" alt="">
-            <p>Nenhum texto encontrado</p>
-            <p>Digite um texto se você pretende encriptografar ou decriptografar</p>
+            <div class="exibirTexto">
+                <img src="" alt="">
+                <p>Nenhum texto encontrado</p>
+                <p>Digite um texto se você pretende encriptografar ou decriptografar</p>
+                <button>Copiar</button>
+            </div>    
         </section>
     </main>
 
