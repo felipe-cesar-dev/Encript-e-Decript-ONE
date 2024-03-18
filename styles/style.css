@@ -43,6 +43,7 @@ body {
     margin-top: 15%;
     margin-left: 10%;
     color: #0A3871;
+    resize: none;
 }
 
 
@@ -113,15 +114,26 @@ body {
     border-radius: 32px;
 }
 
+.textoEbotao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .exibirTexto {
     display: none;
     font-size: 24px;
     color: #495057;
     height: 70vh;
+    border: none;
+    resize: none;
+    border-radius: 32px;
+    padding: 5px;
 }
 
 .botaoCopiar{
+    width: 346px;
     display: none;
 }
 

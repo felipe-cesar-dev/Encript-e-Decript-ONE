@@ -16,7 +16,7 @@ function exibirTexto (textoParametro) {
 }
 
 function copiarTexto() {
-    let textoParaCopiar = document.querySelector('.exibirTexto').innerText;;
+    let textoParaCopiar = document.querySelector('.exibirTexto').innerHTML;;
     navigator.clipboard.writeText(textoParaCopiar);
     alert('Texto copiado: ' + textoParaCopiar)
 }
@@ -32,6 +32,10 @@ function encriptar () {
     let codificado = texto.replace(/e/g, 'enter').replace(/i/g, 'imes').replace(/a/g, 'ai').replace(/o/g, 'ober').replace(/u/g, 'ufat');
     exibirTexto(codificado);
     controleDeExibicao()
+    if (texto.trim() == "") {
+        alert('Digite uma palavra ou texto')
+        
+    }
 }
 
 function descriptar () {
@@ -41,3 +45,4 @@ function descriptar () {
     exibirTexto(decodificado);
     controleDeExibicao();
 }
+

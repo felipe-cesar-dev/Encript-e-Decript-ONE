@@ -1,0 +1,61 @@
+/* Responsive Tablet*/
+
+@media (max-width: 768px) {
+    
+    body{
+        flex-direction: column;
+
+        gap: 50px;
+    }
+
+    .secaoPrincipal, .secaoSecundaria, .secaoTexto{
+        width: 688px;
+    }
+
+    .secaoPrincipal, .textoDigitado, .secaoTexto, .secaoSecundaria, .letrasMinusculas, .botoes {
+        padding: 0;
+        margin: 0;
+    }
+
+    .secaoPrincipal{
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+
+    .textoDigitado {
+        margin-top: 50px;
+        padding: 30px;
+    }
+
+
+    .secaoSecundaria {
+        height: 85px;
+        margin-left: 40px;
+    }
+
+    .encriptar, .descriptar{
+        width: 330px;
+    }
+
+    .secaoTexto{
+        height: 133px;
+        margin-left: 40px;
+    }
+
+    .exibirTexto{
+        width: 688px;
+        height: 200px;
+        padding: 10px;
+    }
+
+    
+
+    .bonecoSVG {
+        display: none;
+    }
+
+    footer{
+        width: 100%;
+    }
+
+}
