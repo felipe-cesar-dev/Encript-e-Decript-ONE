@@ -1,16 +1,13 @@
 /* Responsive Tablet*/
 
-@media (max-width: 768px) {
+@media (max-width: 375px) {
     
     body{
         flex-direction: column;
 
-        gap: 50px;
+        gap: 16px;
     }
 
-    .secaoPrincipal, .secaoSecundaria, .secaoTexto{
-        width: 688px;
-    }
 
     .secaoPrincipal, .textoDigitado, .secaoTexto, .secaoSecundaria, .letrasMinusculas, .botoes {
         padding: 0;
@@ -18,34 +15,39 @@
     }
 
     .secaoPrincipal{
-        margin-left: 40px;
-        margin-top: 40px;
+        width: 343px;
+        margin-left: 16px;
+        margin-top: 16px;
     }
 
     .textoDigitado {
-        margin-top: 50px;
-        padding: 30px;
+        margin-top: 20px;
+        padding: 10px;
+        height: 50%;
     }
 
 
     .secaoSecundaria {
+        width: 343px;
         height: 85px;
-        margin-left: 40px;
+        margin-left: 16px;
     }
 
     .encriptar, .descriptar{
-        width: 330px;
+        width: 160px;
     }
 
     .secaoTexto{
+        width: 343px;
         height: 133px;
-        margin-left: 40px;
+        margin-left: 16px;
     }
 
     .exibirTexto{
-        width: 688px;
-        height: 200px;
+        width: 343px;
+        height: 100px;
         padding: 30px;
+        margin-left: 16px;
     }
 
     
