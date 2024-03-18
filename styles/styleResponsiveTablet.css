@@ -1,6 +1,6 @@
 /* Responsive Tablet*/
 
-@media (max-width: 768px) {
+@media only screen and (min-width: 767px) and (max-width: 1024px)  {
     
     body{
         flex-direction: column;
