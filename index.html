@@ -5,33 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptando e Decriptando Palavras</title>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <img src="" alt="">
-    </header>
 
-    <main>
-        <input 
-        name="textoDigitado" placeholder="Digite seu texto" type="text"  class="textoDigitado">
-        <p>Apenas letras minúsculas e sem acento</p>
-        <button class="encriptar" onclick="encriptar()">Criptografar</button>
-        <button class="descriptar" onclick="descriptar()">Descriptografar</button>
-        <section>
-            <div class="exibirTexto">
-            </div>
-            <div class="secaoInformativa">
-                <img src="" alt="garoto pensando">
-                <p>Nenhum texto encontrado</p>
-                <p>Digite um texto se você pretende encriptografar ou decriptografar</p>
-            </div>
-            
-            <button class="botaoCopiar" style="display: none;" onclick="copiarTexto()">Copiar</button>    
+    <div class="dividirCampos">
+        <main class="secaoPrincipal">
+            <img src="svg/a2x.svg" alt="">
+            <textarea name="textoDigitado" placeholder="Digite seu texto" type="text" class="textoDigitado" cols="20" rows="8"></textarea>
+        </main>
+    
+    
+        <section class="secaoSecundaria">
+            <img class="letrasMinusculas" src="svg/letrasMinusculas.svg" alt="informativo sobre letras permitidas">
+            <div>
+                <button class="encriptar" onclick="encriptar()">Criptografar</button>
+                <button class="descriptar" onclick="descriptar()">Descriptografar</button>    
+            </div> 
         </section>
-    </main>
+
+    </div>
+    
+
+
+    <section class="secaoTexto">
+        <div class="exibirTexto">
+        </div>
+        <div class="secaoInformativa">
+            <img class="bonecoSVG" src="svg/boneco.svg" alt="garoto pensando">
+            <img src="svg/nenhumaMensagem2x.svg" alt="nenhuma msg encontrada">
+        </div>
+        
+        <button class="botaoCopiar" style="display: none;" onclick="copiarTexto()">Copiar</button>    
+    </section>
+    
 
     <footer>
-
+        <p>Desenvolvido por: Felipe César</p> <p> Figma: Alura Projeto ONE</p>
     </footer>
 </body>
 </html>
