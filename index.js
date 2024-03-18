@@ -10,6 +10,7 @@ function ocultarSecaoInformativa() {
 
 function exibirTexto (textoParametro) {
     let secaoTexto = document.querySelector('.exibirTexto')
+    secaoTexto.style.display = 'block'
     secaoTexto.innerHTML = textoParametro;
     return textoParametro;
 }
@@ -40,4 +41,3 @@ function descriptar () {
     exibirTexto(decodificado);
     controleDeExibicao();
 }
-

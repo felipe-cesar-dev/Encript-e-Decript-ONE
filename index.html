@@ -12,32 +12,32 @@
     <div class="dividirCampos">
         <main class="secaoPrincipal">
             <img src="svg/a2x.svg" alt="">
-            <textarea name="textoDigitado" placeholder="Digite seu texto" type="text" class="textoDigitado" cols="20" rows="8"></textarea>
+            <textarea name="textoDigitado" placeholder="Digite seu texto aqui:" type="text" class="textoDigitado" cols="20" rows="20"></textarea>
         </main>
     
     
         <section class="secaoSecundaria">
             <img class="letrasMinusculas" src="svg/letrasMinusculas.svg" alt="informativo sobre letras permitidas">
-            <div>
+            <div class="botoes">
                 <button class="encriptar" onclick="encriptar()">Criptografar</button>
                 <button class="descriptar" onclick="descriptar()">Descriptografar</button>    
             </div> 
         </section>
-
     </div>
     
 
 
-    <section class="secaoTexto">
+    <aside class="secaoTexto">
         <div class="exibirTexto">
+
         </div>
         <div class="secaoInformativa">
             <img class="bonecoSVG" src="svg/boneco.svg" alt="garoto pensando">
             <img src="svg/nenhumaMensagem2x.svg" alt="nenhuma msg encontrada">
         </div>
-        
-        <button class="botaoCopiar" style="display: none;" onclick="copiarTexto()">Copiar</button>    
-    </section>
+
+        <img class="botaoCopiar" onclick="copiarTexto()" src="/svg/botaoCopiar.svg" alt="Botão copiar">
+    </aside>
     
 
     <footer>
