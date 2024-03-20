@@ -8,11 +8,9 @@
         align-items: center;
         display: flex;
         flex-direction: column;
+        gap: 40px;
     }
 
-    header {
-        margin-bottom: 20%;
-    }
 
     header img {
         height: 65px;
@@ -20,9 +18,6 @@
 
 
     footer {
-        position: fixed;
-        bottom: 0;
-        font-size: larger;
         width: 100vw;
         padding: 10px;
     }
@@ -39,11 +34,10 @@
 
     .letrinhas {
         margin: 0;
-        width: 270px;
+        width: 300px;
     }
 
     .encriptar, .descriptar {
-        font-size: larger;
         padding: 20px;
     }
 
