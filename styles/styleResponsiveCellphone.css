@@ -1,63 +1,62 @@
-/* Responsive Tablet*/
-
-@media only screen and (max-width: 600px) {
-    
-    body{
-        flex-direction: column;
-
-        gap: 16px;
-    }
-
-
-    .secaoPrincipal, .textoDigitado, .secaoTexto, .secaoSecundaria, .letrasMinusculas, .botoes {
-        padding: 0;
-        margin: 0;
-    }
-
-    .secaoPrincipal{
-        width: 343px;
-        margin-left: 16px;
-        margin-top: 16px;
-    }
-
-    .textoDigitado {
-        margin-top: 20px;
-        padding: 10px;
-        height: 50%;
-    }
-
-
-    .secaoSecundaria {
-        width: 343px;
-        height: 85px;
-        margin-left: 16px;
-    }
-
-    .encriptar, .descriptar{
-        width: 160px;
-    }
-
-    .secaoTexto{
-        width: 343px;
-        height: 133px;
-        margin-left: 16px;
-    }
-
-    .exibirTexto{
-        width: 343px;
-        height: 100px;
-        padding: 30px;
-        margin-left: 16px;
-    }
-
-    
+@media (max-width: 600px) {
 
     .bonecoSVG {
         display: none;
     }
 
-    footer{
-        width: 100%;
+
+    body{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
     }
 
+    header {
+        margin-bottom: 20%;
+    }
+
+    header img {
+        height: 60px;
+    }
+
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        padding: 10px;
+        font-size: larger;
+    }
+
+    
+    .componentesPrincipais {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .exibirTexto {
+        height: 30vh;
+    }
+
+    .letrinhas {
+        margin: 0;
+        width: 150px;
+    }
+
+    .encriptar, .descriptar {
+        font-size: larger;
+        padding: 20px;
+    }
+
+    .textoDigitado {
+        text-align: center;
+    }
+
+
+    .textoDigitado, .exibirTexto, .botoesMain, .copiaTexto, .botaoCopiar, .nenhuma, .secaoPrincipal, .secaoTexto{
+        margin: 0;
+        padding: 0;
+        width: 340px;
+    }
+   
 }

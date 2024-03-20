@@ -4,8 +4,10 @@ function mostrarBotaoCopiar() {
 }
 
 function ocultarSecaoInformativa() {
-    let ocultarSec = document.querySelector('.secaoInformativa');
-    ocultarSec.style.display = 'none'
+    let boneco = document.querySelector('.bonecoSVG');
+    let nenhuma = document.querySelector('.nenhuma');
+    boneco.style.display = 'none';
+    nenhuma.style.display = 'none';
 }
 
 function exibirTexto (textoParametro) {

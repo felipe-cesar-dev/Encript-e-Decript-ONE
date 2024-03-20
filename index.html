@@ -6,45 +6,44 @@
     <title>Encriptando e Decriptando Palavras</title>
     <script src="index.js"></script>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/styleResponsiveTablet.css">
     <link rel="stylesheet" href="styles/styleResponsiveCellphone.css">
+    <link rel="stylesheet" href="styles/styleResponsiveTablet.css">
 </head>
+
+
 <body>
-    
-    <div class="dividirCampos">
+
+    <header>
+        <img src="svg/a2x.svg" alt="">
+    </header>
+
+    <div class="componentesPrincipais">
         <main class="secaoPrincipal">
-            <img src="svg/a2x.svg" alt="">
-            <textarea autofocus name="textoDigitado" maxlength="1000" placeholder="Digite seu texto aqui:" type="text" class="textoDigitado" cols="20" rows="20"></textarea>
-        </main>
-    
-    
-        <section class="secaoSecundaria">
-            <img class="letrasMinusculas" src="svg/letrasMinusculas.svg" alt="informativo sobre letras permitidas">
-            <div class="botoes">
+            <textarea autofocus name="textoDigitado" maxlength="1000" placeholder="Digite seu texto aqui:" type="text" class="textoDigitado" cols="10" rows="5"></textarea>
+            <img class="letrinhas" src="svg/letrasMinusculas.svg" alt="informativo sobre letras permitidas">
+            <div class="botoesMain">
                 <button class="encriptar" onclick="encriptar()">Criptografar</button>
-                <button class="descriptar" onclick="descriptar()">Descriptografar</button>    
-            </div> 
-        </section>
+                <button class="descriptar" onclick="descriptar()">Descriptografar</button>
+            </div>      
+        </main>
+
+
+
+        <aside class="secaoTexto">
+                <img class="bonecoSVG" src="svg/boneco.svg" alt="garoto pensando">
+                <img class="nenhuma" src="svg/nenhumaMensagem2x.svg" alt="nenhuma msg encontrada">
+                <div class="copiaTexto">
+                <textarea id="exibirTexto" cols="20" rows="16" readonly class="exibirTexto"></textarea >
+                <button class="botaoCopiar" onclick="copiarTexto()">Copiar</button>       
+                </div>    
+        </aside>
     </div>
-    
-
-
-    <aside class="secaoTexto">
-        <div class="textoEbotao">
-            <textarea id="exibirTexto"  class="exibirTexto"></textarea >
-                <img class="botaoCopiar" onclick="copiarTexto()" src="/svg/botaoCopiar.svg" alt="Botão copiar">
-        </div>
-        <div class="secaoInformativa">
-            <img class="bonecoSVG" src="svg/boneco.svg" alt="garoto pensando">
-            <img src="svg/nenhumaMensagem2x.svg" alt="nenhuma msg encontrada">
-        </div>
-
-        
-    </aside>
     
     <footer>
         <p> Idealizado por Alura: Projeto ONE</p>
         <p>Desenvolvido por: Felipe César</p> 
     </footer>
+
+
 </body>
 </html>
