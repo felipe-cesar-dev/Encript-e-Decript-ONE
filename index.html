@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/styleResponsiveCellphone.css">
     <link rel="stylesheet" href="styles/styleResponsiveTablet.css">
+    <script src="https://kit.fontawesome.com/d1070b38b7.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -22,8 +23,8 @@
             <textarea autofocus name="textoDigitado" maxlength="1000" placeholder="Digite seu texto aqui:" type="text" class="textoDigitado" cols="10" rows="5"></textarea>
             <img class="letrinhas" src="svg/letrasMinusculas.svg" alt="informativo sobre letras permitidas">
             <div class="botoesMain">
-                <button class="encriptar" onclick="encriptar()">Criptografar</button>
-                <button class="descriptar" onclick="descriptar()">Descriptografar</button>
+                <button class="encriptar" onclick="encriptar()"> <i class="fa-solid fa-lock"></i> Criptografar</button>
+                <button class="descriptar" onclick="descriptar()"> <i class="fa-solid fa-lock-open"></i> Descriptografar</button>
             </div>      
         </main>
 
@@ -34,7 +35,7 @@
                 <img class="nenhuma" src="svg/nenhumaMensagem2x.svg" alt="nenhuma msg encontrada">
                 <div class="copiaTexto">
                 <textarea id="exibirTexto" cols="20" rows="16" readonly class="exibirTexto"></textarea >
-                <button class="botaoCopiar" onclick="copiarTexto()">Copiar</button>       
+                <button class="botaoCopiar" onclick="copiarTexto()"><i class="fa-solid fa-copy"></i> Copiar</button>       
                 </div>    
         </aside>
     </div>

@@ -33,6 +33,8 @@
     }
 
     .exibirTexto {
+        text-align: center;
+        width: 320px;
         height: 30vh;
     }
 

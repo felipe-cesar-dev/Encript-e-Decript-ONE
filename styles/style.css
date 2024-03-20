@@ -4,7 +4,7 @@
 :root {
     --cor-primaria: #e9f2a6; /* Cor 1 */
     --cor-secundaria:#65A603 ; /* Cor 2 */
-    --cor-terciaria: rgb(252, 255, 236); /* Cor 3 */
+    --cor-terciaria: #fcffec; /* Cor 3 */
 }
 
 *{
@@ -20,7 +20,7 @@ body {
 
 header img {
     margin-top: 15px;
-    height: 30px;
+    height: 50px;
 }
 
 .componentesPrincipais {
@@ -72,6 +72,10 @@ main {
     cursor: pointer;
     font-size: 20px;
     font-family: "Kantumruy Pro", sans-serif;
+}
+
+.lock, .unlock {
+    height: 20px;
 }
 
 .encriptar:hover, .descriptar:hover {
@@ -139,6 +143,7 @@ aside {
     border-radius: 20px;
     padding: 10px;
     background-color: var(--cor-terciaria) ;
+    text-align: center;
 }
 
 .copiaTexto {
