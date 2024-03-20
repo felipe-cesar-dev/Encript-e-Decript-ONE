@@ -20,6 +20,8 @@
     footer {
         width: 100vw;
         padding: 10px;
+        position: fixed;
+        bottom: 0;
     }
 
     

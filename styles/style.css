@@ -118,6 +118,7 @@ aside {
     color: var(--cor-secundaria);
     font-family: "Kantumruy Pro", sans-serif;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .botaoCopiar:hover {
@@ -136,6 +137,8 @@ aside {
     margin: 18px;
     color: #495057;
     border-radius: 20px;
+    padding: 10px;
+    background-color: var(--cor-terciaria) ;
 }
 
 .copiaTexto {
