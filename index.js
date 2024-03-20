@@ -34,21 +34,43 @@ const controleDeExibicao = () => {
     mostrarBotaoCopiar();
 }
 
-function encriptar () {
+function encriptar() {
     let input = document.querySelector('.textoDigitado');
     let texto = input.value;
-    let codificado = texto.replace(/e/g, 'enter').replace(/i/g, 'imes').replace(/a/g, 'ai').replace(/o/g, 'ober').replace(/u/g, 'ufat');
-    exibirTexto(codificado);
-    controleDeExibicao();
-    statusBotaoCopiar();
+    if (texto.trim() === '') {
+        alert('Digite algo no campo abaixo!');
+    } else {
+        let codificado = texto.replace(/e/g, 'enter').replace(/i/g, 'imes').replace(/a/g, 'ai').replace(/o/g, 'ober').replace(/u/g, 'ufat');
+        exibirTexto(codificado);
+        controleDeExibicao();
+        statusBotaoCopiar();
+        checarMaiusculas(texto);
+        input.value = ''
+    }
 }
 
-function descriptar () {
+function descriptar() {
     let input = document.querySelector('.textoDigitado');
     let texto = input.value;
-    let decodificado = texto.replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ai/g, 'a').replace(/ober/g, 'o').replace(/ufat/g, 'u');
-    exibirTexto(decodificado);
-    controleDeExibicao();
-    statusBotaoCopiar();
+    if (texto.trim() === ''){
+        alert('Digite algo no campo de texto!');
+    } else {
+        let decodificado = texto.replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ai/g, 'a').replace(/ober/g, 'o').replace(/ufat/g, 'u');
+        exibirTexto(decodificado);
+        controleDeExibicao();
+        statusBotaoCopiar();
+        checarMaiusculas(texto);
+        input.value = ''
+    }
 }
+
+function checarMaiusculas(texto) {
+    for (let i = 0; i < texto.length; i++) {
+        if (texto[i] !== texto[i].toLowerCase()) {
+            alert('Letras maiúsculas foram ignoradas.');
+            return;
+        }
+    }
+}
+
 
