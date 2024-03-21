@@ -1,4 +1,4 @@
-<div style = 'text-align: center'>
+<div align= 'center'>
 <h1  >Projeto Encriptografar e Descriptografar Texto</h1>
 <h2>Idealizado por Alura/Oracle</h2>
 <h2>Desenvolvido por Felipe César</h2>
