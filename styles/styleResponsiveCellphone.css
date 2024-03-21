@@ -48,9 +48,11 @@
     }
 
     .encriptar, .descriptar {
+        text-align: center;
         display: flex;
         width: 160px;
-        padding: 20px;
+        font-size: 18px;
+        gap: 5px;
     }
 
     .textoDigitado {
@@ -67,10 +69,6 @@
         margin: 0;
         padding: 0;
         width: 340px;
-    }
-
-    .fa-lock-open, .fa-lock {
-        display: none;
     }
    
 }

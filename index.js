@@ -10,20 +10,15 @@ function ocultarSecaoInformativa() {
     nenhuma.style.display = 'none';
 }
 
-const controleDeExibicao = () => {
-    ocultarSecaoInformativa();
-    mostrarBotaoCopiar();
-}
-
 function exibirTexto (textoParametro) {
-    let secaoTexto = document.querySelector('.exibirTexto');
-    secaoTexto.style.display = 'block';
+    let secaoTexto = document.querySelector('.exibirTexto')
+    secaoTexto.style.display = 'block'
     secaoTexto.innerHTML = textoParametro;
     return textoParametro;
 }
 
 function copiarTexto() {
-    let textoParaCopiar = document.querySelector('.exibirTexto').innerHTML;
+    let textoParaCopiar = document.querySelector('.exibirTexto').innerHTML;;
     let botao = document.querySelector('.botaoCopiar');
     navigator.clipboard.writeText(textoParaCopiar);
     botao.innerHTML = 'Copiado <i class="fa-solid fa-check"></i>';
@@ -34,18 +29,26 @@ const statusBotaoCopiar = () => {
     botao.innerHTML = '<i class="fa-solid fa-copy"></i> Copiar'
 }
 
+const controleDeExibicao = () => {
+    ocultarSecaoInformativa();
+    mostrarBotaoCopiar();
+}
+
 function encriptar() {
     let input = document.querySelector('.textoDigitado');
     let texto = input.value;
     if (texto.trim() === '') {
-        alert('Digite algo no campo abaixo!');
+        input.setAttribute('placeholder', 'Você precisa digitar algo aqui!')
     } else {
         let codificado = texto.replace(/e/g, 'enter').replace(/i/g, 'imes').replace(/a/g, 'ai').replace(/o/g, 'ober').replace(/u/g, 'ufat');
         exibirTexto(codificado);
         controleDeExibicao();
         statusBotaoCopiar();
-        input.value = '';
-        checagemtexto();
+        let maiusculas = checarMaiusculas(texto);
+        let especiais = checarCaracteresEspeciais(texto);
+        sinalizandoMaiuscOuCaractEspec(maiusculas || especiais);
+        input.value = ''
+        return true;
     }
 }
 
@@ -53,22 +56,24 @@ function descriptar() {
     let input = document.querySelector('.textoDigitado');
     let texto = input.value;
     if (texto.trim() === ''){
-        alert('Digite algo no campo de texto!');
+        input.setAttribute('placeholder', 'Você precisa digitar algo aqui!')
     } else {
         let decodificado = texto.replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ai/g, 'a').replace(/ober/g, 'o').replace(/ufat/g, 'u');
         exibirTexto(decodificado);
         controleDeExibicao();
         statusBotaoCopiar();
+        let maiusculas = checarMaiusculas(texto);
+        let especiais = checarCaracteresEspeciais(texto);
+        sinalizandoMaiuscOuCaractEspec(maiusculas || especiais);
         input.value = ''
-        checagemtexto();
     }
 }
 
 function checarMaiusculas(texto) {
     for (let i = 0; i < texto.length; i++) {
         if (texto[i] !== texto[i].toLowerCase()) {
-            alert('Letras maiúsculas foram ignoradas.');
-            return;
+            sinalizandoMaiuscOuCaractEspec()
+            return true
         }
     }
 }
@@ -76,14 +81,16 @@ function checarMaiusculas(texto) {
 function checarCaracteresEspeciais(texto) {
     const regex = /[^a-zA-Z0-9\s]/g;
     if (regex.test(texto)) {
-        alert("Caracteres especiais foram ignorados.");
+        sinalizandoMaiuscOuCaractEspec()
+        return true
     }
 }
 
-const checagemtexto = () => {
-    if (checarMaiusculas && checarCaracteresEspeciais) {
-        alert ('Letras maiúsculas e/ou caracteres especiais foram ignorados')
+const sinalizandoMaiuscOuCaractEspec = (ativar) => {
+    let caixa = document.querySelector('.letrinhas');
+    if (ativar) {
+        caixa.style.border = '2px solid red'; // Ativa a borda vermelha
+    } else {
+        caixa.style.border = 'none'; // Remove a borda vermelha
     }
 }
-
-

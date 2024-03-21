@@ -56,9 +56,20 @@
         width: 400px;
         border-radius: 15px;
     }
+
+    .copiaTexto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .botaoCopiar {
+        margin: 5px;
+    }
     
 
-    .textoDigitado, .exibirTexto, .botoesMain, .copiaTexto, .botaoCopiar, .secaoPrincipal, .secaoTexto{
+    .textoDigitado, .exibirTexto, .botoesMain, .copiaTexto, .secaoPrincipal, .secaoTexto{
         margin: 0;
         padding: 0;
         width: 560px;
