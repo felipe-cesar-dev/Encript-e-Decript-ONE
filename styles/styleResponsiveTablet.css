@@ -30,6 +30,10 @@
         gap: 20px;
     }
 
+    .secaoPrincipal {
+        gap: 10px;
+    }
+
     .exibirTexto {
         height: 30vh;
         text-align: center;
@@ -47,10 +51,14 @@
     .textoDigitado {
         text-align: center;
     }
-    
+
+    .nenhuma {
+        width: 400px;
+        border-radius: 15px;
+    }
     
 
-    .textoDigitado, .exibirTexto, .botoesMain, .copiaTexto, .botaoCopiar, .nenhuma, .secaoPrincipal, .secaoTexto{
+    .textoDigitado, .exibirTexto, .botoesMain, .copiaTexto, .botaoCopiar, .secaoPrincipal, .secaoTexto{
         margin: 0;
         padding: 0;
         width: 560px;

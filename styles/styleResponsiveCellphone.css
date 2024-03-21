@@ -18,6 +18,10 @@
         height: 60px;
     }
 
+    .secaoPrincipal {
+        gap: 10px;
+    }
+
 
     footer {
         width: 100vw;
@@ -44,6 +48,8 @@
     }
 
     .encriptar, .descriptar {
+        display: flex;
+        width: 160px;
         padding: 20px;
     }
 
@@ -51,11 +57,20 @@
         text-align: center;
     }
 
+    .nenhuma {
+        border-radius: 10px;
+        width: 250px;
+    }
 
-    .textoDigitado, .exibirTexto, .botoesMain, .copiaTexto, .botaoCopiar, .nenhuma, .secaoPrincipal, .secaoTexto{
+
+    .textoDigitado, .exibirTexto, .botoesMain, .copiaTexto, .secaoPrincipal, .secaoTexto{
         margin: 0;
         padding: 0;
         width: 340px;
+    }
+
+    .fa-lock-open, .fa-lock {
+        display: none;
     }
    
 }
