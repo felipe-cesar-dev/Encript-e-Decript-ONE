@@ -23,14 +23,9 @@ header img {
     height: 50px;
 }
 
-.componentesPrincipais {
-    display: flex;
-}
-
 main {
     background-color: var(--cor-primaria);
     width: 60vw;
-    display: flex;
     flex-direction: column;
 }
 
@@ -58,8 +53,6 @@ main {
     margin-top: 2px;
     margin-bottom: 20px;
     gap: 5px;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .encriptar, .descriptar {
@@ -88,9 +81,7 @@ main {
 
 aside {
     width: 40vw;
-    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -160,6 +151,14 @@ footer{
     font-size: 15px;
     padding: 20px;
     bottom: 0;
+}
+
+aside, .botoesMain {
+    flex-wrap: wrap;
+}
+
+.componentesPrincipais, main, .botoesMain, aside {
+    display: flex;
 }
 
 

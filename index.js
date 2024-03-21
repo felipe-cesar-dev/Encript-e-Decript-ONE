@@ -10,15 +10,20 @@ function ocultarSecaoInformativa() {
     nenhuma.style.display = 'none';
 }
 
+const controleDeExibicao = () => {
+    ocultarSecaoInformativa();
+    mostrarBotaoCopiar();
+}
+
 function exibirTexto (textoParametro) {
-    let secaoTexto = document.querySelector('.exibirTexto')
-    secaoTexto.style.display = 'block'
+    let secaoTexto = document.querySelector('.exibirTexto');
+    secaoTexto.style.display = 'block';
     secaoTexto.innerHTML = textoParametro;
     return textoParametro;
 }
 
 function copiarTexto() {
-    let textoParaCopiar = document.querySelector('.exibirTexto').innerHTML;;
+    let textoParaCopiar = document.querySelector('.exibirTexto').innerHTML;
     let botao = document.querySelector('.botaoCopiar');
     navigator.clipboard.writeText(textoParaCopiar);
     botao.innerHTML = 'Copiado <i class="fa-solid fa-check"></i>';
@@ -27,11 +32,6 @@ function copiarTexto() {
 const statusBotaoCopiar = () => {
     let botao = document.querySelector('.botaoCopiar');
     botao.innerHTML = '<i class="fa-solid fa-copy"></i> Copiar'
-}
-
-const controleDeExibicao = () => {
-    ocultarSecaoInformativa();
-    mostrarBotaoCopiar();
 }
 
 function encriptar() {
@@ -44,8 +44,8 @@ function encriptar() {
         exibirTexto(codificado);
         controleDeExibicao();
         statusBotaoCopiar();
-        checarMaiusculas(texto);
-        input.value = ''
+        input.value = '';
+        checagemtexto();
     }
 }
 
@@ -59,8 +59,8 @@ function descriptar() {
         exibirTexto(decodificado);
         controleDeExibicao();
         statusBotaoCopiar();
-        checarMaiusculas(texto);
         input.value = ''
+        checagemtexto();
     }
 }
 
@@ -70,6 +70,19 @@ function checarMaiusculas(texto) {
             alert('Letras maiúsculas foram ignoradas.');
             return;
         }
+    }
+}
+
+function checarCaracteresEspeciais(texto) {
+    const regex = /[^a-zA-Z0-9\s]/g;
+    if (regex.test(texto)) {
+        alert("Caracteres especiais foram ignorados.");
+    }
+}
+
+const checagemtexto = () => {
+    if (checarMaiusculas && checarCaracteresEspeciais) {
+        alert ('Letras maiúsculas e/ou caracteres especiais foram ignorados')
     }
 }
 
